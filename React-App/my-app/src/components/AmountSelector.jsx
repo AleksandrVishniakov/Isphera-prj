@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const AmountSelector = () => {
-  const [bet, setBet] = useState(0)
+const AmountSelector = (props) => {
+  const [bet, setBet] = useState(props.item.value)
 
   return (
     <div className="AmountSelector">

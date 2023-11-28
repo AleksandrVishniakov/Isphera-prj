@@ -1,10 +1,11 @@
 import AmountSelector from "./AmountSelector"
+import classes from "./CartItem.module.css"
 
 const CartItem = (props) => {
     return (
-        <div>
+        <div className={classes.CartItem}>
             <p>{props.item.title}</p>
-            <AmountSelector/>
+            <AmountSelector item={{value: props.item.value}}/>
         </div>
     )
 }
