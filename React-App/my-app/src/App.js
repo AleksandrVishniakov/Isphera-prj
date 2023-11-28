@@ -1,13 +1,14 @@
 import { useState } from "react";
+import AmountSelector from "./components/AmountSelector";
 
 function App() {
-  const [bet, setBet] = useState(0)
+  const [comment, setComment] = useState("")
 
   return (
     <div className="App">
-      <h1>{bet}</h1>
-      <button onClick={() => setBet(bet+1)}>+</button>
-      <button onClick={() => setBet(bet-1)}>-</button>
+      <AmountSelector/>
+      <h1>Comment: {comment}</h1>
+      <input type="text" value={comment} onChange={event => setComment(event.target.value)}></input>
     </div>
   );
 }
