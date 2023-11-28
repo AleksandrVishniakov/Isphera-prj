@@ -1,13 +1,13 @@
-
+import { useState } from "react";
 
 function App() {
-  let cnt = 0
+  const [bet, setBet] = useState(0)
 
   return (
     <div className="App">
-      <h1>{cnt}</h1>
-      <button onClick={() => cnt++}>+</button>
-      <button onClick={() => cnt--}>-</button>
+      <h1>{bet}</h1>
+      <button onClick={() => setBet(bet+1)}>+</button>
+      <button onClick={() => setBet(bet-1)}>-</button>
     </div>
   );
 }
