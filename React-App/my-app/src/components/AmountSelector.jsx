@@ -5,7 +5,6 @@ const AmountSelector = () => {
 
   return (
     <div>
-        
       <h1>{bet}</h1>
       <button onClick={() => setBet(bet+1)}>+</button>
       <button onClick={() => setBet(bet-1)}>-</button>
