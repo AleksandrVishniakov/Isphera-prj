@@ -4,10 +4,12 @@ const AmountSelector = () => {
   const [bet, setBet] = useState(0)
 
   return (
-    <div>
+    <div className="AmountSelector">
       <h1>{bet}</h1>
-      <button onClick={() => setBet(bet+1)}>+</button>
-      <button onClick={() => setBet(bet-1)}>-</button>
+      <div>
+        <button onClick={() => setBet(bet+1)} className="button_add">+</button>
+        <button onClick={() => setBet(bet-1)} className="button_add">-</button>
+      </div>
     </div>
   );
 }
