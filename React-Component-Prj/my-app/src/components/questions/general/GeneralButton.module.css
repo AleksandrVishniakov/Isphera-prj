@@ -1,0 +1,65 @@
+.GeneralGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.GeneralLabel {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.GeneralLabel:hover {
+    background-color: #e6e6e6;
+}
+
+.GeneralInput {
+    position: absolute;
+    opacity: 0;
+}
+
+.GeneralInput:checked+.GeneralLabel {
+    background-color: #c3e6ff;
+    border-color: #5111ff;
+}
+
+.GeneralInput:focus+.GeneralLabel {
+    outline: 2px solid #5111ff;
+}
+
+.GeneralInnerCircle {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #888;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    transition: border-color 0.2s;
+    position: relative;
+}
+
+.GeneralLabel:hover .GeneralInnerCircle {
+    border-color: #555;
+}
+
+.GeneralInput:checked+.GeneralLabel .GeneralInnerCircle {
+    border-color: #5111ff;
+}
+
+.GeneralInput:checked+.GeneralLabel .GeneralInnerCircle::after {
+    content: '';
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #5111ff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,4 @@
+.GeneralGroup {
+    display: flex;
+    flex-direction: column;
+}

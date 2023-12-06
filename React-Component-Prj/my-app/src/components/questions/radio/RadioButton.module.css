@@ -1,0 +1,65 @@
+.RadioGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.RadioLabel {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.RadioLabel:hover {
+    background-color: #e6e6e6;
+}
+
+.RadioInput {
+    position: absolute;
+    opacity: 0;
+}
+
+.RadioInput:checked+.RadioLabel {
+    background-color: #c3e6ff;
+    border-color: #5111ff;
+}
+
+.RadioInput:focus+.RadioLabel {
+    outline: 2px solid #5111ff;
+}
+
+.RadioInnerCircle {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #888;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    transition: border-color 0.2s;
+    position: relative;
+}
+
+.RadioLabel:hover .RadioInnerCircle {
+    border-color: #555;
+}
+
+.RadioInput:checked+.RadioLabel .RadioInnerCircle {
+    border-color: #5111ff;
+}
+
+.RadioInput:checked+.RadioLabel .RadioInnerCircle::after {
+    content: '';
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #5111ff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

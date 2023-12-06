@@ -1,0 +1,65 @@
+.CheckboxGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.CheckboxLabel {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.CheckboxLabel:hover {
+    background-color: #e6e6e6;
+}
+
+.CheckboxInput {
+    position: absolute;
+    opacity: 0;
+}
+
+.CheckboxInput:checked+.CheckboxLabel {
+    background-color: #c3e6ff;
+    border-color: #5111ff;
+}
+
+.CheckboxInput:focus+.CheckboxLabel {
+    outline: 2px solid #5111ff;
+}
+
+.CheckboxInnerCircle {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #888;
+    border-radius: 1%;
+    margin-right: 0.5em;
+    transition: border-color 0.2s;
+    position: relative;
+}
+
+.CheckboxLabel:hover .CheckboxInnerCircle {
+    border-color: #555;
+}
+
+.CheckboxInput:checked+.CheckboxLabel .CheckboxInnerCircle {
+    border-color: #5111ff;
+}
+
+.CheckboxInput:checked+.CheckboxLabel .CheckboxInnerCircle::after {
+    content: '';
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #5111ff;
+    border-radius: 1%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

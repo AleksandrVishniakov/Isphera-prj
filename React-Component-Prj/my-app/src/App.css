@@ -2,27 +2,28 @@
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*outline: 1px solid red;*/
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     height: auto;
 }
 
 h1 {
     font-size: 48px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 
 h4 {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 300;
     padding-top: 7px;
     padding-bottom: 7px;
 }
 
 p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
 }
