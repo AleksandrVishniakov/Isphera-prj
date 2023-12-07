@@ -9,7 +9,10 @@ const TextQuestion = (props) => {
     return (
         <div className={classes.TextQuestion}>
             <h4>{question}</h4>
-            <TextInput item={{id: id}}/>
+            <TextInput item={{
+                id: id,
+                onChange: props.item.onAnswerChange
+            }}/>
         </div>
     )
 }

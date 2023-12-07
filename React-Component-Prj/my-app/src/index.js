@@ -16,7 +16,7 @@ const configs = {
     {
       type: "checkbox",
       question: "Выберите языки программирования, которые относятся к высокоуровневым языкам.",
-      answer: ["Java", "Python", "Assembly", "C#"],
+      answer: ["Java", "Python", "JavaScript", "C#"],
       data: ["Java", "Python", "JavaScript", "C", "Assembly", "C#"],
     },
     {
@@ -28,7 +28,7 @@ const configs = {
     {
       type: "text",
       question: "Что означает акроним 'IoT' в контексте информационных технологий?",
-      answer: "Интернет вещей",
+      answer: "интернет вещей",
       data: undefined,
     },
     {
@@ -52,7 +52,7 @@ const configs = {
     {
       type: "text",
       question: "Что означает 'ИИ' в контексте компьютерных наук?",
-      answer: "Искусственный интеллект",
+      answer: "искусственный интеллект",
       data: undefined,
     },
     {

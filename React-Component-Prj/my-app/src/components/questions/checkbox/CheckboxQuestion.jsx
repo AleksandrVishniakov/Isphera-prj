@@ -7,8 +7,6 @@ const CheckboxQuestion = (props) => {
 
     const id = props.item.id
     const question = id + ". " + props.item.question
-    const answer = props.item.answer
-    answer.sort()
     const values = props.item.values
 
     const handleAnswersChange = (value, isChecked) => {
@@ -21,7 +19,7 @@ const CheckboxQuestion = (props) => {
 
         ans.sort()
         setCurrentAnswers(ans)
-        console.log(ans)
+        props.item.onAnswerChange(ans)
     }
 
     return (
