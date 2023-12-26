@@ -1,24 +1,13 @@
 import './App.css';
+import Box from '@mui/material/Box';
+import { SignUpForm } from './components/SignUpForm';
 
 function App() {
   return (
     <div className="App">
-      <List sx={style} component="nav" aria-label="mailbox folders">
-        <ListItem button>
-          <ListItemText primary="Inbox" />
-        </ListItem>
-        <Divider />
-        <ListItem button divider>
-          <ListItemText primary="Drafts" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="Trash" />
-        </ListItem>
-        <Divider light />
-        <ListItem button>
-          <ListItemText primary="Spam" />
-        </ListItem>
-      </List>
+      <Box alignItems="center" height="100vh" width="100vw" display="flex" justifyContent="center">
+        <SignUpForm/>
+      </Box>
     </div>
   );
 }
